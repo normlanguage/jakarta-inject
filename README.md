@@ -1,3 +1,5 @@
 # Jakarta Inject
 
-适配声明与可运行示例位于 `jakarta/inject`，固定 Jakarta Inject 2.0.1，发布坐标为 `jakarta:inject:1`。公开面覆盖注入、作用域、限定符、命名与 Provider API。
+[English](README.md) | [简体中文](README.zh-CN.md)
+
+The adapter declaration and runnable example are in `jakarta/inject`. It pins Jakarta Inject 2.0.1 and publishes as `jakarta:inject:1`. The public API covers injection, scopes, qualifiers, names, and the Provider API.
