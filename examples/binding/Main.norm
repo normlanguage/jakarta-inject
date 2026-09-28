@@ -1,0 +1,21 @@
+package binding
+
+import jakarta.inject.Named
+import jakarta.inject.Singleton
+
+@Singleton()
+@Named(value: "greeting")
+class GreetingService {
+  String greet(String name) {
+    return "Hello, " + name
+  }
+}
+
+Void main() {
+  Singleton? singleton = GreetingService.class.annotation<Singleton>()
+  Named? named = GreetingService.class.annotation<Named>()
+  require(condition: singleton != null, message: "Singleton binding is missing")
+  require(condition: named != null && named.value == "greeting", message: "Named binding is missing")
+  require(condition: GreetingService().greet("Norm") == "Hello, Norm", message: "Greeting changed")
+  printLine(named!!.value)
+}
