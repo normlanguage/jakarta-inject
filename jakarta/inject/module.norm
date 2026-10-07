@@ -1,7 +1,9 @@
 Module module() {
   return module(
     name: "jakarta.inject",
-    version: 4,
+    version: 5,
+    dependencies: [dependency(repository: "norm", name: "java.base", version: 1)],
+    exports: ["Inject", "Named", "Provider", "Qualifier", "Scope", "Singleton"],
     binding: jarBinding(
       target: mavenJar(
         group: "jakarta.inject",
@@ -10,12 +12,12 @@ Module module() {
         resolution: sha256("f7dc98062fccf14126abb751b64fab12c312566e8cbdc8483598bffcea93af7c")
       ),
       api: [
-        jarType(name: "Inject", members: []),
-        jarType(name: "Named", members: ["value"]),
-        jarType(name: "Provider", members: ["get"]),
-        jarType(name: "Qualifier", members: []),
-        jarType(name: "Scope", members: []),
-        jarType(name: "Singleton", members: [])
+        jarType(name: "jakarta.inject.Inject", members: []),
+        jarType(name: "jakarta.inject.Named", members: ["value"]),
+        jarType(name: "jakarta.inject.Provider", members: ["get"]),
+        jarType(name: "jakarta.inject.Qualifier", members: []),
+        jarType(name: "jakarta.inject.Scope", members: []),
+        jarType(name: "jakarta.inject.Singleton", members: [])
       ]
     )
   )
