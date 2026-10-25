@@ -1,6 +1,6 @@
 # jakarta.inject Skill
 
-Use this skill to work with Norm module `jakarta.inject` version 5. Use only declarations listed below.
+Use this skill to work with Norm module `jakarta.inject` version 7. Use only declarations listed below.
 
 ## `jakarta.inject`
 
